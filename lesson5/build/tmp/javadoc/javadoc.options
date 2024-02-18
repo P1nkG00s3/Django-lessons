@@ -1,8 +1,0 @@
--classpath 'C:\\Users\\Гусь\\lesson5\\build\\classes\\java\\main;C:\\Users\\Гусь\\lesson5\\build\\resources\\main'
--d 'C:\\Users\\Гусь\\lesson5\\build\\docs\\javadoc'
--doctitle 'test API'
--notimestamp 
--quiet 
--windowtitle 'test API'
-'C:\\Users\\Гусь\\lesson5\\src\\main\\java\\testproject\\Aggregator.java'
-'C:\\Users\\Гусь\\lesson5\\src\\main\\java\\testproject\\Calculator.java'
