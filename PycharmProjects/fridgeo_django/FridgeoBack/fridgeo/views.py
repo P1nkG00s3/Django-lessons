@@ -10,7 +10,7 @@ menu = [
 
 data_dp = [
     {'id': 1, 'title': 'Хумус', 'content': 'Это рецепт хумуса', 'is_published': True},
-    {'id': 2, 'title': 'Рис', 'content': 'Это рецепт риса', 'is_published': False},
+    {'id': 2, 'title': 'Рис', 'content': 'Это рецепт риса', 'is_published': True},
     {'id': 3, 'title': 'Пюре', 'content': 'Это рецепт пюре', 'is_published': True}
 ]
 
