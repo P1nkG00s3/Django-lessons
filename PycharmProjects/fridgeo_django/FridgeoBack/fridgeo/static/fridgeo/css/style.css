@@ -11,7 +11,7 @@ html{
     font-size: 30px;
     font-weight: 700;
     text-decoration: none;
-    color: black
+    color: black;
 }
 .img{
     margin-top:20px;
@@ -23,10 +23,15 @@ html{
 }
 
 .rec-arr{
-    margin-top: 100px;
-    background-color:black;
-    border: 1px solid black;
+    list-style-type: none;
+    margin-inline:20px;
+    background-color: white;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius:32px;
+    -webkit-box-shadow: 0px 0px 150px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 150px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 80px -7px rgba(0, 0 , 0, 0.3);
 }
 
 .imgchild{
@@ -92,9 +97,7 @@ body > .window-up{
     opacity: 1;
 }
 
-body{
-    font-size: 20px;
-}
+
 
 @media screen and (min-device-width: 1600px) {
     .window-up{

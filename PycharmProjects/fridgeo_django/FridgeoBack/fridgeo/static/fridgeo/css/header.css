@@ -6,11 +6,11 @@ html {
     font-weight: 200;
 }
 body{
+    background-color:black;
     z-index: 0;
     overflow-x: hidden;
     margin: 0;
 }
-
 
 
 .my_receipt{
@@ -35,7 +35,7 @@ body{
     z-index: 100;
     align-items: center;
 
-    /*border-radius: 30px;*/
+    border-radius: 30px;
     background-color: white;
     border-bottom: 1px grey;
     -webkit-box-shadow: 0px 0px 150px 10px rgba(0, 0, 0, 0.3);

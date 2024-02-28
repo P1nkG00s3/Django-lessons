@@ -1,20 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link type="text/css" href="{% static 'fridgeo/css/style.css' %}" rel='stylesheet'/>
+    <link type="text/css" href="{% static 'fridgeo/css/header.css' %}" rel='stylesheet'/>
+<!--    <link type="text/css" href="{% static 'fridgeo/css/menu_button.css' %}" rel='stylesheet'/>-->
+    <link rel="icon" href="{% static 'fridgeo/images/1054109.png' %}" type="image/x-icon" />
     {% block stylesheets %} {% endblock %}
 </head>
 <body>
- <style >
-        #a{
-            white-space: nowrap;
-            font-size: 30px;
-            font-weight: 700;
-            text-decoration: none;
-            color: black
-        }
-    </style>
-    <div class="start">
+    <div class="start" style="opacity: 1">
         <span class="my_receipt"><p><a id="a" href="{% url 'startpage' %}">Мои рецепты</a></p></span>
         <div class="receipt_menu">
             {% for m in menu %}
