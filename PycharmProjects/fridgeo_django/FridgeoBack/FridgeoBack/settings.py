@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fridgeo.apps.FridgeoConfig'
+    'fridgeo.apps.FridgeoConfig',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [

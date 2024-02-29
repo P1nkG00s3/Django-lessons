@@ -10,8 +10,8 @@
     <link rel="icon" href="{% static 'fridgeo/images/1054109.png' %}" type="image/x-icon" />
     {% block stylesheets %} {% endblock %}
 </head>
-<body>
-    <div class="start" style="opacity: 1">
+<body style="background-color: white">
+    <div class="start" style="border-radius: 0">
         <span class="my_receipt"><p><a id="a" href="{% url 'startpage' %}">Мои рецепты</a></p></span>
         <div class="receipt_menu">
             {% for m in menu %}

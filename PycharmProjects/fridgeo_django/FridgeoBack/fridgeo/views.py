@@ -1,6 +1,8 @@
 from django.http import HttpResponse, HttpResponseNotFound
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
+from . import models
+
 
 menu = [
     {'title': "Информация", 'url_name': 'information'},
@@ -16,9 +18,11 @@ data_dp = [
 
 
 def index(request):
+    posts = models.Receipt.objects.filter(is_published=1)
+
     data = {
         'menu': menu,
-        'receipt': data_dp
+        'posts': posts
     }
     return render(request, 'fridgeo/index.html', context=data)
 
@@ -29,8 +33,16 @@ def HelloThere(request):
         "<div class=\"wrapper\"> <div class=\"name\">CALCULATOR</div><section class=\"screen\">  0 </section>")
 
 
-def show_post(request, post_id):
-    return HttpResponse(f'<p>Статья с номером {post_id}</p>')
+def show_post(request, post_slug):
+    post = get_object_or_404(models.Receipt, slug=post_slug)
+
+    data = {
+        'title': post.title,
+        'menu': menu,
+        'post': post
+    }
+
+    return render(request, 'fridgeo/post.html', data)
 
 
 def page_not_found(request, exception):

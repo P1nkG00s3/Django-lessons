@@ -8,15 +8,13 @@
     {% block content %}
 
         <ul class="rec-arr">
-            {% for r in receipt %}
-            {% if r.is_published %}
+            {% for p in posts %}
             <li>
-                <h2>{{ r.title }}</h2>
-                <p>{{ r.content }}</p>
-                <p><a href = "{% url 'post' r.id %}">Читать рецепт</a></p>
+                <h2>{{ p.title }}</h2>
+                <p>{{ p.receipt|truncatewords:10}}</p>
+                <p><a href="{{ p.get_absolute_url }}">Читать рецепт</a></p>
                 <hr>
             </li>
-            {% endif %}
             {% endfor %}
             <li>
                 <h2>Добавить рецепт</h2>
@@ -25,4 +23,3 @@
         </ul>
     {% endblock %}
 </body>
-</html>
